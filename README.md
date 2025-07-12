@@ -99,9 +99,9 @@ npx react-native run-android
 
 | Login Screen | Users List | Chat Screen | Other Screens |
 |--------------|------------|-------------|---------------|
-| ![Login](./assets/screenshots/login.png) | ![Users](./assets/screenshots/users.png) | ![Chat](./assets/screenshots/chat.png) | ![Other](./assets/screenshots/other.png) |
+| ![Login](./assets/screenshots/login.png) | ![Users](./assets/screenshots/usersscreens.png) | ![Chat](./assets/screenshots/chatscreen1.png) | ![Chat2](./assets/screenshots/chatscreen2user.png) |
 
-> _To add more screens, place your screenshot in the `assets/screenshots/` folder and add a new column or row above. For example, for a Profile screen, add `![Profile](./assets/screenshots/profile.png)` in the table above._
+
 
 ---
 
