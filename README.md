@@ -1,97 +1,163 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
-# Getting Started
+# 📲 CometChat Integration - React Native CLI App
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+This project showcases the integration of CometChat's React Native UI Kit using **custom components**, such as Login, Users List, and a fully functional Messaging screen.
 
-## Step 1: Start Metro
+---
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+## 🚀 Overview
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+- 💬 One-on-one chat
+- 🧑 User login via UID
+- 📄 Custom UI with CometChat components
+- ✅ Successfully tested on both emulator and physical device
 
-```sh
-# Using npm
-npm start
+---
 
-# OR using Yarn
-yarn start
+## 🧰 Tech Stack
+
+- React Native CLI (TypeScript)
+- CometChat UI Kit (`@cometchat/chat-uikit-react-native`)
+- Android Emulator & Physical Device
+- Hermes (optional)
+
+---
+
+## 🔧 Setup Instructions
+
+### 1. Install dependencies
+
+```bash
+npm install
 ```
 
-## Step 2: Build and run your app
+### 2. Configure CometChat credentials in `App.tsx`
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
-
-### Android
-
-```sh
-# Using npm
-npm run android
-
-# OR using Yarn
-yarn android
+```ts
+const APP_ID = "278702d5acd2788b";
+const AUTH_KEY = "ee217882a89f3757f9c783585e93c85c4f6f6418";
+const REGION = "us";
+const DEMO_UID = "teacher_1"; // like "superhero1"
 ```
 
-### iOS
+> ⚠️ Replace the placeholders above with actual CometChat values from your dashboard.
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+### 3. Run the app
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
+```bash
+npx react-native run-android
 ```
 
-Then, and every time you update your native dependencies, run:
+---
 
-```sh
-bundle exec pod install
+## 🐛 Issues Faced
+
+### ❌ TurboModule FileManager Error
+
+```
+Error: Exception in HostObject::get for prop 'FileManager' ...
+TurboModule system assumes returnType == void iff the method is synchronous.
 ```
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+### ❌ CometChatMessageComposer undefined
 
-```sh
-# Using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
+```
+TypeError: Cannot read property 'CometChatMessageComposer' of undefined
 ```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+---
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+## ✅ Solutions & Fixes
 
-## Step 3: Modify your app
+- Disabled Hermes when needed (edit `android/gradle.properties`):
 
-Now that you have successfully run the app, let's make changes!
+```properties
+hermesEnabled=false
+```
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+- Reinstalled CometChat dependencies to fix undefined components:
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+```bash
+npm install @cometchat/chat-uikit-react-native
+```
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+- Performed full Android clean:
 
-## Congratulations! :tada:
+```bash
+cd android
+./gradlew clean
+cd ..
+npx react-native run-android
+```
 
-You've successfully run and modified your React Native App. :partying_face:
+- Ensured correct imports and conditional rendering of UI Kit components
 
-### Now what?
+---
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
 
-# Troubleshooting
+## 📸 Screenshots
 
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+| Login Screen | Users List | Chat Screen | Other Screens |
+|--------------|------------|-------------|---------------|
+| ![Login](./assets/screenshots/login.png) | ![Users](./assets/screenshots/users.png) | ![Chat](./assets/screenshots/chat.png) | ![Other](./assets/screenshots/other.png) |
 
-# Learn More
+> _To add more screens, place your screenshot in the `assets/screenshots/` folder and add a new column or row above. For example, for a Profile screen, add `![Profile](./assets/screenshots/profile.png)` in the table above._
 
-To learn more about React Native, take a look at the following resources:
+---
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+## 📎 Folder Structure
+
+```
+📁 src
+ ┣ 📁 components
+ ┃ ┣ 📄 AppTheme.ts
+ ┃ ┣ 📄 Login.tsx
+ ┃ ┣ 📄 UsersList.tsx
+ ┃ ┣ 📄 CustomHeader.tsx
+ ┃ ┣ 📄 CustomButton.tsx
+ ┃ ┗ 📄 Messages.tsx
+ ┣ 📁 screens
+ ┃ ┣ 📄 LoginScreen.tsx
+ ┃ ┗ 📄 UsersListScreen.tsx
+📄 App.tsx
+```
+
+---
+
+## 💡 Features
+
+- Custom login form
+- FlatList-based user listing
+- Custom header with back navigation
+- Full screen message composer and message list
+- Cross-device support
+
+---
+
+## 📤 Submission
+
+This project is part of the **CometChat Internship Task**.
+
+- ✅ Code is live on GitHub
+- ✅ All issues and solutions are documented
+- ✅ Screenshots attached
+- ✅ Email sent to `careers.intern@cometchat.com`
+
+---
+
+## 🙏 Special Thanks
+
+Thanks to **CometChat** for providing the UI Kit and this internship opportunity.
+
+👉 [Star CometChat on GitHub](https://github.com/cometchat-pro)  
+👉 [Follow CometChat Organization](https://github.com/cometchat-pro)
+
+---
+
+## 📎 GitHub Repo
+
+> Add this link after pushing your code:
+
+🔗 **GitHub Link**: [https://github.com/your-username/cometchat-integration](https://github.com/your-username/cometchat-integration)
+
+---
