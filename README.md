@@ -153,10 +153,3 @@ Thanks to **CometChat** for providing the UI Kit and this internship opportunity
 
 ---
 
-## 📎 GitHub Repo
-
-> Add this link after pushing your code:
-
-🔗 **GitHub Link**: [https://github.com/your-username/cometchat-integration](https://github.com/your-username/cometchat-integration)
-
----
