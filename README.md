@@ -99,7 +99,7 @@ npx react-native run-android
 
 | Login Screen | Users List | Chat Screen | Other Screens |
 |--------------|------------|-------------|---------------|
-| ![Login](./assets/screenshots/login.png) | ![Users](./assets/screenshots/usersscreens.png) | ![Chat](./assets/screenshots/chatscreen1.png) | ![Chat2](./assets/screenshots/chatscreen2user.png) |
+| ![Login](./assets/screenshots/login.png) | ![Users](./assets/screenshots/usersscreen.png) | ![Chat](./assets/screenshots/chatscreen1.png) | ![Chat2](./assets/screenshots/chatscreen2user.png) |
 
 
 
