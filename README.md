@@ -99,7 +99,7 @@ npx react-native run-android
 i add screenshots in this project assest/screenshots folder 12 but i show readme file just 4 screenshots 
 | Login Screen | Users List | Chat Screen | Other Screens | 
 |--------------|------------|-------------|---------------|
-| ![Login](./assets/screenshots/login.png) | ![Users](./assets/screenshots/usersscreen2.png) | ![Chat](./assets/screenshots/chatscreen1.png) | ![Chat2](./assets/screenshots/chatscreen2user.png) |
+| ![Login](./assets/screenshots/login.png) | ![Users](./assets/screenshots/userscreen2.png) | ![Chat](./assets/screenshots/chatscreen1.png) | ![Chat2](./assets/screenshots/chatscreen2user.png) |
 
 
 ---
