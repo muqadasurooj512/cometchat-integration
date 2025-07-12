@@ -37,10 +37,10 @@ npm install
 const APP_ID = "278702d5acd2788b";
 const AUTH_KEY = "ee217882a89f3757f9c783585e93c85c4f6f6418";
 const REGION = "us";
-const DEMO_UID = "teacher_1"; // like "superhero1"
+const DEMO_UID = "teacher_1"; //  "user_id"
 ```
 
-> ⚠️ Replace the placeholders above with actual CometChat values from your dashboard.
+
 
 ### 3. Run the app
 
@@ -96,11 +96,10 @@ npx react-native run-android
 
 
 ## 📸 Screenshots
-
-| Login Screen | Users List | Chat Screen | Other Screens |
+i add screenshots in this project assest/screenshots folder 12 but i show readme file just 4 screenshots 
+| Login Screen | Users List | Chat Screen | Other Screens | 
 |--------------|------------|-------------|---------------|
 | ![Login](./assets/screenshots/login.png) | ![Users](./assets/screenshots/usersscreen2.png) | ![Chat](./assets/screenshots/chatscreen1.png) | ![Chat2](./assets/screenshots/chatscreen2user.png) |
-
 
 
 ---
